@@ -5,7 +5,7 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 zoomed_option_string="@zoomed_icon"
 unzoomed_option_string="@unzoomed_icon"
 
-zoomed_icon_osx="🔍 "
+zoomed_icon_osx="Z"
 zoomed_icon="Z"
 unzoomed_icon=""
 
@@ -28,7 +28,8 @@ unzoomed_icon_default() {
 }
 
 zoom_status() {
-  tmux list-panes -F '#F' | grep -q Z >/dev/null
+  # tmux list-panes -F '#F' | grep -q Z
+  0
 }
 
 print_icon() {
